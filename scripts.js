@@ -56,7 +56,7 @@ setInterval(() => {
 
 
 
-//هذا القسم مازال قيد التعديل قابل للحذف
+// هذا القسم مازال قيد التعديل قابل للحذف-فسم تحديث اسعار الذهب
 async function fetchGoldPrice() {
   const apiKey = 'b1c12573023758321b05b7ca36e89272b1c12573';
   const url = `https://www.goldpricez.com/api/rates?currency=usd&api_key=${apiKey}`;
