@@ -286,52 +286,6 @@ body {
 
 
 
-/* هذا القسم مازال قيد التعديل قابل للحذف */
-#gold-prices {
-  background: linear-gradient(to bottom, #fff8dc, #f5deb3);
-  padding: 20px;
-  border-radius: 15px;
-  text-align: center;
-  font-family: 'Arial', sans-serif;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  position: relative;
-  overflow: hidden;
-}
-
-.coins-animation::before,
-.coins-animation::after {
-  content: "🪙";
-  font-size: 2rem;
-  position: absolute;
-  animation: float 3s infinite ease-in-out;
-  opacity: 0.8;
-}
-
-.coins-animation::before {
-  left: 20%;
-  top: 0;
-  animation-delay: 0s;
-}
-
-.coins-animation::after {
-  right: 20%;
-  top: 0;
-  animation-delay: 1.5s;
-}
-
-@keyframes float {
-  0% { top: 0; transform: rotate(0deg); }
-  50% { top: 60px; transform: rotate(180deg); }
-  100% { top: 0; transform: rotate(360deg); }
-}
-
-#prices p {
-  font-size: 1.2rem;
-  color: #333;
-  margin: 10px 0;
-}
-
-
 
 
 
