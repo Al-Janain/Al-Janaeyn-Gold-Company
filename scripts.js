@@ -56,34 +56,8 @@ setInterval(() => {
 
 
 
-// هذا القسم مازال قيد التعديل قابل للحذف-فسم تحديث اسعار الذهب
-async function fetchGoldPrice() {
-  const apiKey = 'b1c12573023758321b05b7ca36e89272b1c12573';
-  const url = `https://www.goldpricez.com/api/rates?currency=usd&api_key=${apiKey}`;
 
-  try {
-    const response = await fetch(url);
-    const data = await response.json();
 
-    if (data && data.result && data.result.XAU) {
-      const goldPrice = data.result.XAU.price_gram_24k;
-
-      document.getElementById('gold-price').innerText = `سعر الذهب عيار 24: ${goldPrice.toFixed(2)} USD للغرام`;
-
-      const now = new Date();
-      const timeString = now.toLocaleTimeString('ar-EG');
-      document.getElementById('refresh-time').innerText = `آخر تحديث: ${timeString}`;
-    } else {
-      document.getElementById('gold-price').innerText = 'تعذر جلب السعر.';
-    }
-  } catch (error) {
-    document.getElementById('gold-price').innerText = 'حدث خطأ أثناء تحميل البيانات.';
-  }
-}
-
-// التحديث الأولي + التحديث كل ساعة
-fetchGoldPrice();
-setInterval(fetchGoldPrice, 3600000);
 
 
 
